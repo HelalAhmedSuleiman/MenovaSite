@@ -13,9 +13,10 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-    'login'  => "Sign In",
-    'register'  => "Join Now"
-
+    'Main'  => "Main",
+    'How_It_Works'  => "How It Works",
+    'Privacy_Policy'  => "Privacy Policy",
+    'View_Freelancer'  => "View Freelancer",
+    'View_Wmployers'  => "View Wmployers",
+    'Browse_Projects'  => "Browse Projects",
 ];

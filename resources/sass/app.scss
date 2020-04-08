@@ -3,6 +3,11 @@
 
 // Variables
 @import 'variables';
+@import 'global';
+@import 'helpers';
+
+// style
+@import 'style';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
