@@ -1,2 +1,0 @@
-# MenovaSite
-Menova Site
