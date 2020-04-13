@@ -6,6 +6,10 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "dot/i18n": "^0.2.1",
+        "dot/pages": "0.2",
+        "dot/platform": "0.4.66",
+        "dot/posts": "^0.2.6",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0"
@@ -27,7 +31,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Dot\\Posts\\": "plugins/posts/src/",
+            "Dot\\Categories\\": "plugins/categories/src/",
+            "Dot\\Navigations\\": "plugins/navigations/src/",
+            "Dot\\Media\\": "plugins/media/src/",
+            "Dot\\Tags\\": "plugins/tags/src/",
+            "Dot\\Roles\\": "plugins/roles/src/",
+            "Dot\\Users\\": "plugins/users/src/",
+            "Dot\\Pages\\": "plugins/pages/src/",
+            "Dot\\I18n\\": "plugins/i18n/src/"
         }
     },
     "extra": {

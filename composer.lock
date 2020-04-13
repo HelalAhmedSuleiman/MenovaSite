@@ -4,8 +4,321 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f2120fa77d42a42b4210cdbe1c114e2",
+    "content-hash": "8938eda79e68abb8caf2fbd95f5bd4db",
     "packages": [
+        {
+            "name": "aws/aws-sdk-php",
+            "version": "2.8.31",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "64fa4b07f056e338a5f0f29eece75babaa83af68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/64fa4b07f056e338a5f0f29eece75babaa83af68",
+                "reference": "64fa4b07f056e338a5f0f29eece75babaa83af68",
+                "shasum": ""
+            },
+            "require": {
+                "guzzle/guzzle": "~3.7",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "doctrine/cache": "~1.0",
+                "ext-openssl": "*",
+                "monolog/monolog": "~1.4",
+                "phpunit/phpunit": "~4.0",
+                "phpunit/phpunit-mock-objects": "2.3.1",
+                "symfony/yaml": "~2.1"
+            },
+            "suggest": {
+                "doctrine/cache": "Adds support for caching of credentials and responses",
+                "ext-apc": "Allows service description opcode caching, request and response caching, and credentials caching",
+                "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
+                "monolog/monolog": "Adds support for logging HTTP requests and responses",
+                "symfony/yaml": "Eases the ability to write manifests for creating jobs in AWS Import/Export"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Aws": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Amazon Web Services",
+                    "homepage": "http://aws.amazon.com"
+                }
+            ],
+            "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
+            "homepage": "http://aws.amazon.com/sdkforphp",
+            "keywords": [
+                "amazon",
+                "aws",
+                "cloud",
+                "dynamodb",
+                "ec2",
+                "glacier",
+                "s3",
+                "sdk"
+            ],
+            "time": "2016-07-25T18:03:20+00:00"
+        },
+        {
+            "name": "aws/aws-sdk-php-laravel",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php-laravel.git",
+                "reference": "90187392c1a79948a6c7a4bbf9cbe73dab5cc107"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php-laravel/zipball/90187392c1a79948a6c7a4bbf9cbe73dab5cc107",
+                "reference": "90187392c1a79948a6c7a4bbf9cbe73dab5cc107",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php": "~2.4",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "laravel/framework": "~5.0",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aws\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Amazon Web Services",
+                    "homepage": "http://aws.amazon.com"
+                }
+            ],
+            "description": "A simple Laravel 5 service provider for including the AWS SDK for PHP.",
+            "homepage": "http://aws.amazon.com/sdkforphp2",
+            "keywords": [
+                "amazon",
+                "aws",
+                "dynamodb",
+                "ec2",
+                "laravel",
+                "laravel 5",
+                "s3",
+                "sdk"
+            ],
+            "time": "2015-03-12T16:54:55+00:00"
+        },
+        {
+            "name": "barryvdh/laravel-debugbar",
+            "version": "v2.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-debugbar.git",
+                "reference": "d7c88f08131f6404cb714f3f6cf0642f6afa3903"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/d7c88f08131f6404cb714f3f6cf0642f6afa3903",
+                "reference": "d7c88f08131f6404cb714f3f6cf0642f6afa3903",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+                "maximebf/debugbar": "~1.13.0",
+                "php": ">=5.5.9",
+                "symfony/finder": "~2.7|~3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\Debugbar\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "PHP Debugbar integration for Laravel",
+            "keywords": [
+                "debug",
+                "debugbar",
+                "laravel",
+                "profiler",
+                "webprofiler"
+            ],
+            "time": "2017-07-21T11:56:48+00:00"
+        },
+        {
+            "name": "consoletvs/charts",
+            "version": "5.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ConsoleTVs/Charts.git",
+                "reference": "353039ae19488c0ddd33213f5506548ef8b77558"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ConsoleTVs/Charts/zipball/353039ae19488c0ddd33213f5506548ef8b77558",
+                "reference": "353039ae19488c0ddd33213f5506548ef8b77558",
+                "shasum": ""
+            },
+            "require": {
+                "consoletvs/support": "^2.1.2",
+                "illuminate/support": "5.*",
+                "jenssegers/date": "v3.*",
+                "jlawrence/eos": "3.*",
+                "php": ">=7.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ConsoleTVs\\Charts\\ChartsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Charts": "ConsoleTVs\\Charts\\Facades\\Charts"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ConsoleTVs\\Charts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Erik Campobadal",
+                    "email": "soc@erik.cat"
+                }
+            ],
+            "description": "Create charts for laravel using different charts libraries",
+            "time": "2017-09-28T14:44:56+00:00"
+        },
+        {
+            "name": "consoletvs/support",
+            "version": "2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ConsoleTVs/Support.git",
+                "reference": "c7502eb323069bc7da1ad37e28d9c281ade8f1f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ConsoleTVs/Support/zipball/c7502eb323069bc7da1ad37e28d9c281ade8f1f0",
+                "reference": "c7502eb323069bc7da1ad37e28d9c281ade8f1f0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "illuminate/support": "5.*",
+                "intervention/image": "^2.4",
+                "php": ">=7.0",
+                "umpirsky/language-list": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ConsoleTVs\\Support\\SupportServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ConsoleTVs\\Support\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Erik Campobadal",
+                    "email": "soc@erik.cat"
+                }
+            ],
+            "description": "ConsoleTVs support library",
+            "time": "2017-12-15T07:30:36+00:00"
+        },
+        {
+            "name": "davechild/textstatistics",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DaveChild/Text-Statistics.git",
+                "reference": "e83d5f82726db80e662ae305fce3b3c41299b4f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DaveChild/Text-Statistics/zipball/e83d5f82726db80e662ae305fce3b3c41299b4f5",
+                "reference": "e83d5f82726db80e662ae305fce3b3c41299b4f5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7"
+            },
+            "suggest": {
+                "ext-bcmath": "More accurate floating point calculations.",
+                "ext-mbstring": "Handle multi-byte text properly."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "DaveChild\\TextStatistics": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Child",
+                    "email": "dave@addedbytes.com",
+                    "homepage": "https://www.addedbytes.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP package to measure the readability of text according to various algorithms.",
+            "homepage": "https://github.com/DaveChild/Text-Statistics",
+            "time": "2018-08-21T08:17:10+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
@@ -38,6 +351,256 @@
             ],
             "description": "implementation of xdg base directory specification for php",
             "time": "2019-12-04T15:06:13+00:00"
+        },
+        {
+            "name": "doctrine/cache",
+            "version": "1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "382e7f4db9a12dc6c19431743a2b096041bcdd62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/382e7f4db9a12dc6c19431743a2b096041bcdd62",
+                "reference": "382e7f4db9a12dc6c19431743a2b096041bcdd62",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.1"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
+            },
+            "require-dev": {
+                "alcaeus/mongo-php-adapter": "^1.1",
+                "doctrine/coding-standard": "^6.0",
+                "mongodb/mongodb": "^1.1",
+                "phpunit/phpunit": "^7.0",
+                "predis/predis": "~1.0"
+            },
+            "suggest": {
+                "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Cache\\": "lib/Doctrine/Common/Cache"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Cache library is a popular cache implementation that supports many different drivers such as redis, memcache, apc, mongodb and others.",
+            "homepage": "https://www.doctrine-project.org/projects/cache.html",
+            "keywords": [
+                "abstraction",
+                "apcu",
+                "cache",
+                "caching",
+                "couchdb",
+                "memcached",
+                "php",
+                "redis",
+                "xcache"
+            ],
+            "time": "2019-11-29T15:36:20+00:00"
+        },
+        {
+            "name": "doctrine/dbal",
+            "version": "v2.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "c2b8e6e82732a64ecde1cddf9e1e06cb8556e3d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/c2b8e6e82732a64ecde1cddf9e1e06cb8556e3d8",
+                "reference": "c2b8e6e82732a64ecde1cddf9e1e06cb8556e3d8",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "^1.0",
+                "doctrine/event-manager": "^1.0",
+                "ext-pdo": "*",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "jetbrains/phpstorm-stubs": "^2019.1",
+                "phpstan/phpstan": "^0.11.3",
+                "phpunit/phpunit": "^8.4.1",
+                "symfony/console": "^2.0.5|^3.0|^4.0|^5.0"
+            },
+            "suggest": {
+                "symfony/console": "For helpful console commands such as SQL execution and import of files."
+            },
+            "bin": [
+                "bin/doctrine-dbal"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.10.x-dev",
+                    "dev-develop": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\DBAL\\": "lib/Doctrine/DBAL"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.",
+            "homepage": "https://www.doctrine-project.org/projects/dbal.html",
+            "keywords": [
+                "abstraction",
+                "database",
+                "db2",
+                "dbal",
+                "mariadb",
+                "mssql",
+                "mysql",
+                "oci8",
+                "oracle",
+                "pdo",
+                "pgsql",
+                "postgresql",
+                "queryobject",
+                "sasql",
+                "sql",
+                "sqlanywhere",
+                "sqlite",
+                "sqlserver",
+                "sqlsrv"
+            ],
+            "time": "2020-01-04T12:56:21+00:00"
+        },
+        {
+            "name": "doctrine/event-manager",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/event-manager.git",
+                "reference": "629572819973f13486371cb611386eb17851e85c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/629572819973f13486371cb611386eb17851e85c",
+                "reference": "629572819973f13486371cb611386eb17851e85c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "conflict": {
+                "doctrine/common": "<2.9@dev"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\": "lib/Doctrine/Common"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                }
+            ],
+            "description": "The Doctrine Event Manager is a simple PHP event system that was built to be used with the various Doctrine projects.",
+            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
+            "keywords": [
+                "event",
+                "event dispatcher",
+                "event manager",
+                "event system",
+                "events"
+            ],
+            "time": "2019-11-10T09:48:07+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -167,6 +730,646 @@
                 "php"
             ],
             "time": "2019-10-30T14:39:59+00:00"
+        },
+        {
+            "name": "dot/auth",
+            "version": "0.1.17",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-auth.git",
+                "reference": "29dcb8253717cd7dbabbdff4d1be4d6c49fe4749"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-auth/get/29dcb8253717cd7dbabbdff4d1be4d6c49fe4749.zip",
+                "reference": "29dcb8253717cd7dbabbdff4d1be4d6c49fe4749",
+                "shasum": ""
+            },
+            "require": {
+                "dot/platform": "0.4.*",
+                "dot/users": "*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Auth\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The auth plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-auth",
+            "keywords": [
+                "auth",
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "platform",
+                "plugins"
+            ],
+            "time": "2019-01-14T17:19:20+00:00"
+        },
+        {
+            "name": "dot/blocks",
+            "version": "0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-blocks.git",
+                "reference": "4a6fd99c5f9f5bbfc81957bd08731ccd5fa2d6fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-blocks/get/4a6fd99c5f9f5bbfc81957bd08731ccd5fa2d6fe.zip",
+                "reference": "4a6fd99c5f9f5bbfc81957bd08731ccd5fa2d6fe",
+                "shasum": ""
+            },
+            "require": {
+                "dot/categories": "*",
+                "dot/platform": "0.4.*",
+                "dot/posts": "*",
+                "dot/tags": "*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Blocks\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The blocks plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-blocks",
+            "keywords": [
+                "blocks",
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "platform",
+                "plugins"
+            ],
+            "time": "2018-01-10T13:37:35+00:00"
+        },
+        {
+            "name": "dot/categories",
+            "version": "0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-categories.git",
+                "reference": "e0f06af5dc90ec727d717b24226f19565b60688d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-categories/get/e0f06af5dc90ec727d717b24226f19565b60688d.zip",
+                "reference": "e0f06af5dc90ec727d717b24226f19565b60688d",
+                "shasum": ""
+            },
+            "require": {
+                "dot/platform": "0.4.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Categories\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The categories plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-categories",
+            "keywords": [
+                "categories",
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "platform",
+                "plugins"
+            ],
+            "time": "2018-01-10T13:37:54+00:00"
+        },
+        {
+            "name": "dot/dashboard",
+            "version": "0.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-dashboard.git",
+                "reference": "0ef5345eef23cb456533f09d9c3fd912f4794710"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-dashboard/get/0ef5345eef23cb456533f09d9c3fd912f4794710.zip",
+                "reference": "0ef5345eef23cb456533f09d9c3fd912f4794710",
+                "shasum": ""
+            },
+            "require": {
+                "consoletvs/charts": "^5.4",
+                "dot/platform": "0.4.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Dashboard\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The dashboard plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-dashboard",
+            "keywords": [
+                "cms",
+                "dashboard",
+                "dot",
+                "framework",
+                "laravel",
+                "platform",
+                "plugins"
+            ],
+            "time": "2018-02-03T11:13:52+00:00"
+        },
+        {
+            "name": "dot/galleries",
+            "version": "0.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-galleries.git",
+                "reference": "c866334fda8f8d33ab1a2235be662efce308f1c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-galleries/get/c866334fda8f8d33ab1a2235be662efce308f1c1.zip",
+                "reference": "c866334fda8f8d33ab1a2235be662efce308f1c1",
+                "shasum": ""
+            },
+            "require": {
+                "dot/platform": "0.4.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Galleries\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The galleries plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-galleries",
+            "keywords": [
+                "cms",
+                "dot",
+                "framework",
+                "galleries",
+                "laravel",
+                "platform",
+                "plugins"
+            ],
+            "time": "2019-01-14T17:19:44+00:00"
+        },
+        {
+            "name": "dot/i18n",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-i18n.git",
+                "reference": "032c7bbeef62208663cefc0e9798e5d053e43bc5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-i18n/get/032c7bbeef62208663cefc0e9798e5d053e43bc5.zip",
+                "reference": "032c7bbeef62208663cefc0e9798e5d053e43bc5",
+                "shasum": ""
+            },
+            "require": {
+                "dot/platform": "0.4.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\I18n\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The i18n plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-i18n",
+            "keywords": [
+                "Users",
+                "cms",
+                "dot",
+                "framework",
+                "i18n",
+                "laravel",
+                "platform",
+                "plugins"
+            ],
+            "time": "2018-01-21T13:58:20+00:00"
+        },
+        {
+            "name": "dot/media",
+            "version": "0.2.11",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-media.git",
+                "reference": "e705632c2761bfb6149258d7f895d72ab123031c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-media/get/e705632c2761bfb6149258d7f895d72ab123031c.zip",
+                "reference": "e705632c2761bfb6149258d7f895d72ab123031c",
+                "shasum": ""
+            },
+            "require": {
+                "aws/aws-sdk-php-laravel": "2.0",
+                "dot/platform": "0.4.*",
+                "intervention/image": "2.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Media\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The media plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-media",
+            "keywords": [
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "media",
+                "platform",
+                "plugins"
+            ],
+            "time": "2019-01-20T11:29:05+00:00"
+        },
+        {
+            "name": "dot/options",
+            "version": "0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-options.git",
+                "reference": "7f9a4ae70cf6f94627931110b15593a9ba058ea8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-options/get/7f9a4ae70cf6f94627931110b15593a9ba058ea8.zip",
+                "reference": "7f9a4ae70cf6f94627931110b15593a9ba058ea8",
+                "shasum": ""
+            },
+            "require": {
+                "dot/platform": "0.4.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Options\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The options plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-options",
+            "keywords": [
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "options",
+                "platform",
+                "plugins"
+            ],
+            "time": "2019-01-20T11:31:54+00:00"
+        },
+        {
+            "name": "dot/pages",
+            "version": "0.2",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-pages.git",
+                "reference": "e6bfc0858180ea23924f4fe5a5fb7b7b94b551b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-pages/get/e6bfc0858180ea23924f4fe5a5fb7b7b94b551b5.zip",
+                "reference": "e6bfc0858180ea23924f4fe5a5fb7b7b94b551b5",
+                "shasum": ""
+            },
+            "require": {
+                "dot/auth": "*",
+                "dot/media": "*",
+                "dot/platform": "*",
+                "dot/tags": "*",
+                "dot/users": "*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Pages\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The pages module of dot/cms",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-pages",
+            "keywords": [
+                "cms",
+                "dotcms",
+                "framework",
+                "laravel",
+                "modules",
+                "plugins"
+            ],
+            "time": "2017-09-28T13:48:40+00:00"
+        },
+        {
+            "name": "dot/platform",
+            "version": "0.4.66",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-platform.git",
+                "reference": "cf44a9ff1eea148717b6c97520452f25b672eccc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-platform/get/cf44a9ff1eea148717b6c97520452f25b672eccc.zip",
+                "reference": "cf44a9ff1eea148717b6c97520452f25b672eccc",
+                "shasum": ""
+            },
+            "require": {
+                "barryvdh/laravel-debugbar": "2.*",
+                "doctrine/dbal": "^2.5",
+                "dot/auth": "*",
+                "dot/dashboard": "*",
+                "dot/galleries": "*",
+                "dot/media": "*",
+                "dot/options": "*",
+                "dot/roles": "*",
+                "dot/users": "*",
+                "ext-bcmath": "*",
+                "ext-curl": "*",
+                "ext-gd": "*",
+                "laravel/framework": ">=5.5",
+                "php": ">=7.1.0"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dot\\Platform\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Platform\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Just a laravel plugins platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-platform",
+            "keywords": [
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "platform",
+                "plugins"
+            ],
+            "time": "2019-01-20T10:09:57+00:00"
+        },
+        {
+            "name": "dot/posts",
+            "version": "0.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-posts.git",
+                "reference": "af1c7bd4aede00177ebde13fbf79bf1dc9305282"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-posts/get/af1c7bd4aede00177ebde13fbf79bf1dc9305282.zip",
+                "reference": "af1c7bd4aede00177ebde13fbf79bf1dc9305282",
+                "shasum": ""
+            },
+            "require": {
+                "dot/blocks": "*",
+                "dot/categories": "*",
+                "dot/platform": "0.4.*",
+                "dot/seo": "*",
+                "dot/tags": "*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Posts\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The posts plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-posts",
+            "keywords": [
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "platform",
+                "plugins",
+                "posts"
+            ],
+            "time": "2018-02-03T10:57:29+00:00"
+        },
+        {
+            "name": "dot/roles",
+            "version": "0.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-roles.git",
+                "reference": "ee3b63896919c017519855a2f3cc77f0fa38a63b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-roles/get/ee3b63896919c017519855a2f3cc77f0fa38a63b.zip",
+                "reference": "ee3b63896919c017519855a2f3cc77f0fa38a63b",
+                "shasum": ""
+            },
+            "require": {
+                "dot/platform": "0.4.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Roles\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The roles plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-roles",
+            "keywords": [
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "platform",
+                "plugins",
+                "roles"
+            ],
+            "time": "2018-02-01T14:29:14+00:00"
+        },
+        {
+            "name": "dot/seo",
+            "version": "0.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-seo.git",
+                "reference": "b1b10b751ee2d99c3c075efd077f64d5b08beb2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-seo/get/b1b10b751ee2d99c3c075efd077f64d5b08beb2e.zip",
+                "reference": "b1b10b751ee2d99c3c075efd077f64d5b08beb2e",
+                "shasum": ""
+            },
+            "require": {
+                "davechild/textstatistics": "1.*",
+                "dot/platform": "0.4.*",
+                "roumen/sitemap": "2.*",
+                "sunra/php-simple-html-dom-parser": "^1.5"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Seo\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The seo plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-seo",
+            "keywords": [
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "optimization",
+                "platform",
+                "plugins",
+                "search",
+                "seo"
+            ],
+            "time": "2019-01-20T11:07:06+00:00"
+        },
+        {
+            "name": "dot/tags",
+            "version": "0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-tags.git",
+                "reference": "19ea10f92384f87d80cc27f75dec5f2a9887dcf7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-tags/get/19ea10f92384f87d80cc27f75dec5f2a9887dcf7.zip",
+                "reference": "19ea10f92384f87d80cc27f75dec5f2a9887dcf7",
+                "shasum": ""
+            },
+            "require": {
+                "dot/platform": "0.4.*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Tags\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The tags plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-tags",
+            "keywords": [
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "platform",
+                "plugins",
+                "tags"
+            ],
+            "time": "2018-02-11T10:24:26+00:00"
+        },
+        {
+            "name": "dot/users",
+            "version": "0.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/basemkhirat/dot-users.git",
+                "reference": "9cb469f6d02b466fa2fad83627814abd20517ee3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/basemkhirat/dot-users/get/9cb469f6d02b466fa2fad83627814abd20517ee3.zip",
+                "reference": "9cb469f6d02b466fa2fad83627814abd20517ee3",
+                "shasum": ""
+            },
+            "require": {
+                "dot/platform": "0.4.*",
+                "dot/roles": "*"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Dot\\Users\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The users plugin of dot/platform",
+            "homepage": "https://bitbucket.org/basemkhirat/dot-users",
+            "keywords": [
+                "Users",
+                "cms",
+                "dot",
+                "framework",
+                "laravel",
+                "platform",
+                "plugins"
+            ],
+            "time": "2018-01-31T15:14:13+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -330,6 +1533,240 @@
             "time": "2017-06-15T17:19:42+00:00"
         },
         {
+            "name": "guzzle/guzzle",
+            "version": "v3.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "4de0618a01b34aa1c8c33a3f13f396dcd3882eba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/4de0618a01b34aa1c8c33a3f13f396dcd3882eba",
+                "reference": "4de0618a01b34aa1c8c33a3f13f396dcd3882eba",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.3",
+                "symfony/event-dispatcher": ">=2.1"
+            },
+            "replace": {
+                "guzzle/batch": "self.version",
+                "guzzle/cache": "self.version",
+                "guzzle/common": "self.version",
+                "guzzle/http": "self.version",
+                "guzzle/inflection": "self.version",
+                "guzzle/iterator": "self.version",
+                "guzzle/log": "self.version",
+                "guzzle/parser": "self.version",
+                "guzzle/plugin": "self.version",
+                "guzzle/plugin-async": "self.version",
+                "guzzle/plugin-backoff": "self.version",
+                "guzzle/plugin-cache": "self.version",
+                "guzzle/plugin-cookie": "self.version",
+                "guzzle/plugin-curlauth": "self.version",
+                "guzzle/plugin-error-response": "self.version",
+                "guzzle/plugin-history": "self.version",
+                "guzzle/plugin-log": "self.version",
+                "guzzle/plugin-md5": "self.version",
+                "guzzle/plugin-mock": "self.version",
+                "guzzle/plugin-oauth": "self.version",
+                "guzzle/service": "self.version",
+                "guzzle/stream": "self.version"
+            },
+            "require-dev": {
+                "doctrine/cache": "*",
+                "monolog/monolog": "1.*",
+                "phpunit/phpunit": "3.7.*",
+                "psr/log": "1.0.*",
+                "symfony/class-loader": "*",
+                "zendframework/zend-cache": "<2.3",
+                "zendframework/zend-log": "<2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Guzzle": "src/",
+                    "Guzzle\\Tests": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Guzzle Community",
+                    "homepage": "https://github.com/guzzle/guzzle/contributors"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "abandoned": "guzzlehttp/guzzle",
+            "time": "2014-01-28T22:29:15+00:00"
+        },
+        {
+            "name": "guzzlehttp/psr7",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0",
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "ext-zlib": "*",
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            },
+            "suggest": {
+                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
+                }
+            ],
+            "description": "PSR-7 message implementation that also provides common utility methods",
+            "keywords": [
+                "http",
+                "message",
+                "psr-7",
+                "request",
+                "response",
+                "stream",
+                "uri",
+                "url"
+            ],
+            "time": "2019-07-01T23:21:34+00:00"
+        },
+        {
+            "name": "intervention/image",
+            "version": "2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Intervention/image.git",
+                "reference": "abbf18d5ab8367f96b3205ca3c89fb2fa598c69e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/abbf18d5ab8367f96b3205ca3c89fb2fa598c69e",
+                "reference": "abbf18d5ab8367f96b3205ca3c89fb2fa598c69e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "guzzlehttp/psr7": "~1.1",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.2",
+                "phpunit/phpunit": "^4.8 || ^5.7"
+            },
+            "suggest": {
+                "ext-gd": "to use GD library based image processing.",
+                "ext-imagick": "to use Imagick based image processing.",
+                "intervention/imagecache": "Caching extension for the Intervention Image library"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Intervention\\Image\\ImageServiceProvider"
+                    ],
+                    "aliases": {
+                        "Image": "Intervention\\Image\\Facades\\Image"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Intervention\\Image\\": "src/Intervention/Image"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Vogel",
+                    "email": "oliver@olivervogel.com",
+                    "homepage": "http://olivervogel.com/"
+                }
+            ],
+            "description": "Image handling and manipulation library with support for Laravel integration",
+            "homepage": "http://image.intervention.io/",
+            "keywords": [
+                "gd",
+                "image",
+                "imagick",
+                "laravel",
+                "thumbnail",
+                "watermark"
+            ],
+            "time": "2019-11-02T09:15:47+00:00"
+        },
+        {
             "name": "jakub-onderka/php-console-color",
             "version": "v0.2",
             "source": {
@@ -418,6 +1855,114 @@
             "description": "Highlight PHP code in terminal",
             "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "jenssegers/date",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/date.git",
+                "reference": "58393b0544fc2525b3fcd02aa4c989857107e05a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/date/zipball/58393b0544fc2525b3fcd02aa4c989857107e05a",
+                "reference": "58393b0544fc2525b3fcd02aa4c989857107e05a",
+                "shasum": ""
+            },
+            "require": {
+                "nesbot/carbon": "^1.0|^2.0",
+                "php": ">=5.6",
+                "symfony/translation": "^2.7|^3.0|^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0|^6.0|^7.0",
+                "satooshi/php-coveralls": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Jenssegers\\Date\\DateServiceProvider"
+                    ],
+                    "aliases": {
+                        "Date": "Jenssegers\\Date\\Date"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jenssegers\\Date\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "A date library to help you work with dates in different languages",
+            "homepage": "https://github.com/jenssegers/date",
+            "keywords": [
+                "carbon",
+                "date",
+                "datetime",
+                "i18n",
+                "laravel",
+                "time",
+                "translation"
+            ],
+            "time": "2019-03-10T08:50:58+00:00"
+        },
+        {
+            "name": "jlawrence/eos",
+            "version": "v3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jlawrence11/eos.git",
+                "reference": "25e3d0f2316cb4636000f452a8e7dcc83725a32a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jlawrence11/eos/zipball/25e3d0f2316cb4636000f452a8e7dcc83725a32a",
+                "reference": "25e3d0f2316cb4636000f452a8e7dcc83725a32a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "jlawrence\\eos\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1+"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Lawrence",
+                    "email": "jon@jon-lawrence.com"
+                }
+            ],
+            "description": "Parse and solve math equations without using 'eval()'.",
+            "keywords": [
+                "eos",
+                "equations",
+                "math",
+                "solve"
+            ],
+            "time": "2016-03-02T22:35:41+00:00"
         },
         {
             "name": "kylekatarnls/update-helper",
@@ -744,6 +2289,67 @@
                 "storage"
             ],
             "time": "2020-03-17T18:58:12+00:00"
+        },
+        {
+            "name": "maximebf/debugbar",
+            "version": "1.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maximebf/php-debugbar.git",
+                "reference": "afee79a236348e39a44cb837106b7c5b4897ac2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/afee79a236348e39a44cb837106b7c5b4897ac2a",
+                "reference": "afee79a236348e39a44cb837106b7c5b4897ac2a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "^1.0",
+                "symfony/var-dumper": "^2.6|^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0"
+            },
+            "suggest": {
+                "kriswallsmith/assetic": "The best way to manage assets",
+                "monolog/monolog": "Log using Monolog",
+                "predis/predis": "Redis storage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DebugBar\\": "src/DebugBar/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxime Bouroumeau-Fuseau",
+                    "email": "maxime.bouroumeau@gmail.com",
+                    "homepage": "http://maximebf.com"
+                },
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Debug bar in the browser for php application",
+            "homepage": "https://github.com/maximebf/php-debugbar",
+            "keywords": [
+                "debug",
+                "debugbar"
+            ],
+            "time": "2017-01-05T08:46:19+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1076,6 +2682,56 @@
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
             "name": "psr/log",
             "version": "1.1.3",
             "source": {
@@ -1245,6 +2901,46 @@
             "time": "2019-12-06T14:19:43+00:00"
         },
         {
+            "name": "ralouphie/getallheaders",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "A polyfill for getallheaders.",
+            "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
             "name": "ramsey/uuid",
             "version": "3.9.3",
             "source": {
@@ -1330,6 +3026,110 @@
                 "uuid"
             ],
             "time": "2020-02-21T04:36:14+00:00"
+        },
+        {
+            "name": "roumen/sitemap",
+            "version": "v2.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Laravelium/laravel-sitemap.git",
+                "reference": "977dda2ff52843e8162a11e5760d04372d0b04f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Laravelium/laravel-sitemap/zipball/977dda2ff52843e8162a11e5760d04372d0b04f8",
+                "reference": "977dda2ff52843e8162a11e5760d04372d0b04f8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.5.*",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.4.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Roumen\\Sitemap\\SitemapServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Roumen\\Sitemap": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roumen Damianoff",
+                    "email": "roumen@crimsson.com",
+                    "homepage": "https://damianoff.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A not so simple sitemap generator for Laravel.",
+            "homepage": "https://damianoff.com/en/projects/laravel-sitemap",
+            "keywords": [
+                "Sitemap",
+                "generator",
+                "laravel"
+            ],
+            "abandoned": "laravelium/sitemap",
+            "time": "2017-09-07T16:19:37+00:00"
+        },
+        {
+            "name": "sunra/php-simple-html-dom-parser",
+            "version": "v1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sunra/php-simple-html-dom-parser.git",
+                "reference": "75b9b1cb64502d8f8c04dc11b5906b969af247c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sunra/php-simple-html-dom-parser/zipball/75b9b1cb64502d8f8c04dc11b5906b969af247c6",
+                "reference": "75b9b1cb64502d8f8c04dc11b5906b969af247c6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sunra\\PhpSimple\\HtmlDomParser": "Src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sunra",
+                    "email": "sunra@yandex.ru",
+                    "homepage": "https://github.com/sunra"
+                },
+                {
+                    "name": "S.C. Chen",
+                    "homepage": "http://sourceforge.net/projects/simplehtmldom/"
+                }
+            ],
+            "description": "Composer adaptation of: A HTML DOM parser written in PHP5+ let you manipulate HTML in a very easy way! Require PHP 5+. Supports invalid HTML. Find tags on an HTML page with selectors just like jQuery. Extract contents from HTML in a single line.",
+            "homepage": "https://github.com/sunra/php-simple-html-dom-parser",
+            "keywords": [
+                "dom",
+                "html",
+                "parser"
+            ],
+            "time": "2016-11-22T22:57:47+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2730,6 +4530,48 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2019-10-24T08:53:34+00:00"
+        },
+        {
+            "name": "umpirsky/language-list",
+            "version": "v1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/umpirsky/language-list.git",
+                "reference": "7813f6696559496d014acd5dce0e3b09c0766844"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/umpirsky/language-list/zipball/7813f6696559496d014acd5dce0e3b09c0766844",
+                "reference": "7813f6696559496d014acd5dce0e3b09c0766844",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "slowprog/composer-copy-file": "^0.2",
+                "symfony/locale": "^2.7|^3.0",
+                "umpirsky/list-generator": "^1.1"
+            },
+            "type": "library",
+            "extra": {
+                "copy-file": {
+                    "vendor/umpirsky/list-generator/Dockerfile": "./",
+                    "vendor/umpirsky/list-generator/docker-compose.yml": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Saša Stamenković",
+                    "email": "umpirsky@gmail.com"
+                }
+            ],
+            "description": "List of all languages with names and ISO 639-1 codes in all languages and all data formats.",
+            "time": "2018-05-08T16:54:36+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

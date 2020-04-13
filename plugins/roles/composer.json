@@ -1,0 +1,23 @@
+{
+    "name": "dot/roles",
+    "description": "The roles plugin of dot/platform",
+    "keywords": [
+        "framework",
+        "laravel",
+        "cms",
+        "plugins",
+        "platform",
+        "dot",
+        "roles"
+    ],
+    "license": "MIT",
+    "type": "package",
+    "require": {
+        "dot/platform": "0.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dot\\Roles\\": "src"
+        }
+    }
+}
