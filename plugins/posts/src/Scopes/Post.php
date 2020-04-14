@@ -18,7 +18,7 @@ class Post implements Scope
         }
 
         if ($lang) {
-            //return $builder->where('posts.id', $lang);
+            return $builder;//->where('posts.id', $lang);
         }
 
     }

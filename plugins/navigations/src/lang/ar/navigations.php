@@ -3,8 +3,8 @@
 return [
 
 
-    'posts' => 'الأخبار',
-    'search_posts' => "البحث في الأخبار",
+    'posts' => 'المشاريع',
+    'search_posts' => "البحث في المشاريع",
     'pages' => 'الصفحات',
     'search_pages' => "البحث في الصفحات",
     'categories' => 'التصنيفات',

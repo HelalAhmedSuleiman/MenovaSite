@@ -204,7 +204,7 @@
                                                 <a data-toggle="tooltip" data-placement="bottom"
                                                    title="{{ trans("posts::posts.edit") }}" class="text-navy"
                                                    href="{{ route("admin.posts.edit", array("id" => $post->id)) }}">
-                                                    <strong>{{ $post->title->en }}</strong>
+                                                    <strong>{{ $post->title }}</strong>
                                                 </a>
 
                                             </td>

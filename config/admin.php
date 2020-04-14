@@ -36,6 +36,7 @@ return [
     'plugins' => [
         "admin" => Dot\Platform\System::class,
         "posts" => Dot\Posts\Posts::class,
+        "blocks" => Dot\Blocks\Blocks::class,
         "pages" => Dot\Pages\Pages::class,
         "navigations" => \Dot\Navigations\Navigations::class,
         "categories" => Dot\Categories\Categories::class,
