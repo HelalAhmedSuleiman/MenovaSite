@@ -55,10 +55,9 @@ class Media extends Model
         if (is_array($allowed_types)) {
             $allowed_types = join(",", $allowed_types);
         }
-        dd(option("media_max_file_size", 51200));
 
         $rules = array(
-            'files.0' => "mimes:" . $allowed_types . "|max:" . option("media_max_file_size", 51200),
+            'files.0' => "mimes:" . $allowed_types . "|max:" . option("media_max_file_size", 5120),
         );
 
         $validator = Validator::make(Request::all(), $rules);

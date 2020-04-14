@@ -212,7 +212,7 @@
 
                                         <a class="post-media-preview" href="javascript:void(0)">
                                             <img width="100%" height="130px" class="post-media"
-                                                 src="{{ ($post and @ $post->media) ? ($post->media->provider_image) : assets("admin::default/video.png") }}">
+                                                 src="{{ ($post and @ $post->media) ? ($post->media->provider_image) ? ($post->media->provider_image) : assets("admin::files/mp4.png") : assets("admin::default/video.png") }}">
                                         </a>
                                     </div>
                                 </div>

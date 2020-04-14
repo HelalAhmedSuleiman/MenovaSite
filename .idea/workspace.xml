@@ -6,8 +6,6 @@
       <change beforePath="$PROJECT_DIR$/config/media.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/media.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/media/src/Models/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/media/src/Models/Media.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/posts/src/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/posts/src/views/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/posts/src/views/editor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/posts/src/views/editor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +59,7 @@
     <session id="2005019163">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -69,13 +67,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="18" />
-          <entry key="php" value="274" />
+          <entry key="php" value="369" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="92" />
-          <entry key="PHP" value="182" />
+          <entry key="Blade" value="112" />
+          <entry key="PHP" value="257" />
           <entry key="PLAIN_TEXT" value="18" />
         </counts>
       </usages-collector>
@@ -86,16 +84,16 @@
           <entry key="jpeg" value="11" />
           <entry key="jpg" value="18" />
           <entry key="json" value="1" />
-          <entry key="php" value="29" />
+          <entry key="php" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="6" />
+          <entry key="Blade" value="8" />
           <entry key="CSS" value="2" />
           <entry key="Image" value="29" />
           <entry key="JSON" value="1" />
-          <entry key="PHP" value="23" />
+          <entry key="PHP" value="26" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -104,22 +102,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/media/src/Models/Media.php">
+        <entry file="file://$PROJECT_DIR$/config/media.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-              <folding>
-                <element signature="e#36#47#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="226">
+              <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/media.php">
+        <entry file="file://$PROJECT_DIR$/plugins/posts/src/views/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+            <state relative-caret-position="382">
+              <caret line="216" column="42" selection-start-line="216" selection-start-column="42" selection-end-line="216" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -144,9 +139,9 @@
       <find>count</find>
       <find>display:none</find>
       <find>display</find>
-      <find>upload</find>
       <find>option</find>
       <find>max</find>
+      <find>upload</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,11 +161,11 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/plugins/posts/src/views/editor.blade.php" />
-        <option value="$PROJECT_DIR$/plugins/posts/src/views/edit.blade.php" />
         <option value="$PROJECT_DIR$/vendor/dot/options/src/Controllers/OptionsController.php" />
-        <option value="$PROJECT_DIR$/plugins/media/src/Models/Media.php" />
         <option value="$PROJECT_DIR$/vendor/dot/options/src/helpers.php" />
         <option value="$PROJECT_DIR$/config/media.php" />
+        <option value="$PROJECT_DIR$/plugins/posts/src/views/edit.blade.php" />
+        <option value="$PROJECT_DIR$/plugins/media/src/Models/Media.php" />
       </list>
     </option>
   </component>
@@ -333,7 +328,51 @@
             <path>
               <item name="menova" type="b2602c69:ProjectViewProjectNode" />
               <item name="menova" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="menova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="menova" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="menova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="menova" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Middleware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="menova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="menova" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="menova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="menova" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="menova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="menova" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="menova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="menova" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="menova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="menova" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="menova" type="b2602c69:ProjectViewProjectNode" />
@@ -364,14 +403,6 @@
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="uploads" type="462c0819:PsiDirectoryNode" />
               <item name="2020" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="menova" type="b2602c69:ProjectViewProjectNode" />
-              <item name="menova" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
-              <item name="2020" type="462c0819:PsiDirectoryNode" />
-              <item name="04" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="menova" type="b2602c69:ProjectViewProjectNode" />
@@ -489,12 +520,12 @@
       <option name="presentableId" value="Default" />
       <updated>1586874482754</updated>
       <workItem from="1586874484134" duration="4868000" />
-      <workItem from="1586879637377" duration="10421000" />
+      <workItem from="1586879637377" duration="12103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15333000" />
+    <option name="totallyTimeSpent" value="17015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -512,9 +543,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.102134146" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.52134144" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.33841464" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.19359756" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -529,27 +560,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/navigations/src/views/navigations.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="263" column="48" selection-start-line="263" selection-start-column="44" selection-end-line="263" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/navigations/src/lang/en/navigations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/dot/platform/src/Plugin.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -613,22 +623,6 @@
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3054" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/posts/src/views/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="624" selection-start-line="623" selection-end-line="682" />
-          <folding>
-            <element signature="e#3271#3317#0#HTML" expanded="true" />
-            <element signature="e#17158#18774#0#Blade" />
-            <element signature="e#18885#19237#0#HTML" />
-            <element signature="e#19262#20732#0#HTML" />
-            <element signature="e#21119#21144#0#HTML" expanded="true" />
-            <element signature="e#29690#30949#0#HTML" />
-            <element signature="e#31017#32265#0#HTML" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/uploads/2020/04/medium-2660294067278580264.jpg">
@@ -757,16 +751,6 @@
     <entry file="file://$PROJECT_DIR$/public/uploads/2020/04/713468211030463632.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/media/src/Models/Media.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          <folding>
-            <element signature="e#36#47#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/dot/options/src/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -774,10 +758,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="410" column="9" selection-start-line="410" selection-start-column="9" selection-end-line="410" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/media/src/Models/Media.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-196">
+          <caret line="92" column="57" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="57" />
+          <folding>
+            <element signature="e#36#47#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/media.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+        <state relative-caret-position="226">
+          <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/posts/src/views/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="216" column="42" selection-start-line="216" selection-start-column="42" selection-end-line="216" selection-end-column="42" />
         </state>
       </provider>
     </entry>
