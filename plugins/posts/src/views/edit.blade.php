@@ -73,25 +73,22 @@
                                          style="direction: {{ $locale["direction"] }};">
 
                                         <div class="form-group">
-                        <textarea name="title[{{ $key }}]" class="form-control input-lg" rows="1"
-                                  id="post_title-{{$key}}"
-                                  placeholder="{{ trans("posts::posts.attributes.title", [], $key) }}">{{ @Request
+                                            <label for="input-title-{{ $key }}">{{ trans("posts::posts.attributes.title", [], $key) }}</label>
+                                            <textarea name="title[{{ $key }}]" class="form-control input-lg" rows="1"
+                                                      id="post_title-{{$key}}"
+                                                      placeholder="{{ trans("posts::posts.attributes.title", [], $key) }}">{{ @Request
                                 ::old("title", $post->title->$key) }}</textarea>
                                         </div>
 
                                         <div class="form-group">
-                        <textarea name="excerpt[{{ $key }}]" class="form-control" id="post_excerpt-{{$key}}"
-                                  placeholder="{{ trans("posts::posts.attributes.excerpt", [], $key) }}">{{ @Request
+                                            <label for="input-excerpt-{{ $key }}">{{ trans("posts::posts.attributes.excerpt", [], $key) }}</label>
+                                            <textarea name="excerpt[{{ $key }}]" class="form-control"
+                                                      id="post_excerpt-{{$key}}"
+                                                      placeholder="{{ trans("posts::posts.attributes.excerpt", [], $key) }}">{{ @Request
                                 ::old("excerpt", $post->excerpt->$key) }}</textarea>
                                         </div>
                                         <div class="form-group">
                                             <label for="input-content-{{ $key }}">{{ trans("posts::posts.attributes.content", [], $key) }}</label>
-
-                                            {{--<textarea name="content[{{ $key }}]" class="form-control" id="post_content-{{$key}}" rows="6"
-                                                      placeholder="{{ trans("posts::posts.attributes.content", [], $key) }}">{{ @Request
-                                                    ::old("content", $post->content->$key) }}</textarea>
-                                                        </div>
-                                                    </div>--}}
                                             @include("posts::editor", [
                                                             "id" => "input-content-".$key,
                                                             "placeholder" => trans("posts::posts.attributes.content", [], $key),
@@ -100,303 +97,302 @@
                                                         ])
                                         </div>
                                     </div>
-                                        @endforeach
-                                    </div>
+                                @endforeach
                             </div>
                         </div>
+                    </div>
 
-                        <div class="panel panel-default">
+                    <div class="panel panel-default">
 
-                            <div class="panel-heading">
-                                <i class="fa fa-camera"></i>
-                                {{ trans("posts::posts.add_fields") }}
-                                <a class="add-custom-field pull-right" href="javascript:void(0)">
-                                    <i class="fa fa-plus text-navy"></i>
-                                </a>
+                        <div class="panel-heading">
+                            <i class="fa fa-camera"></i>
+                            {{ trans("posts::posts.add_fields") }}
+                            <a class="add-custom-field pull-right" href="javascript:void(0)">
+                                <i class="fa fa-plus text-navy"></i>
+                            </a>
 
-                            </div>
+                        </div>
 
-                            <div class="panel-body">
+                        <div class="panel-body">
 
-                                <div class="form-group meta-rows">
+                            <div class="form-group meta-rows">
 
-                                    @foreach ($post->meta as $meta)
-                                        <div class="meta-row">
-
-                                            <input type="text" name="custom_names[]" value="{{ $meta->name }}"
-                                                   class="form-control input-md pull-left custom-field-name"
-                                                   placeholder="{{ trans("posts::posts.custom_name") }}"/>
-
-                                            <textarea name="custom_values[]"
-                                                      class="form-control input-lg pull-left custom-field-value"
-                                                      rows="1"
-                                                      placeholder="{{ trans("posts::posts.custom_value") }}">{{ $meta->value }}</textarea>
-
-                                            <a class="remove-custom-field pull-right" href="javascript:void(0)">
-                                                <i class="fa fa-times text-navy"></i>
-                                            </a>
-
-                                        </div>
-                                    @endforeach
-
+                                @foreach ($post->meta as $meta)
                                     <div class="meta-row">
 
-                                        <input type="text" name="custom_names[]"
+                                        <input type="text" name="custom_names[]" value="{{ $meta->name }}"
                                                class="form-control input-md pull-left custom-field-name"
                                                placeholder="{{ trans("posts::posts.custom_name") }}"/>
 
                                         <textarea name="custom_values[]"
                                                   class="form-control input-lg pull-left custom-field-value"
                                                   rows="1"
-                                                  placeholder="{{ trans("posts::posts.custom_value") }}"></textarea>
+                                                  placeholder="{{ trans("posts::posts.custom_value") }}">{{ $meta->value }}</textarea>
 
                                         <a class="remove-custom-field pull-right" href="javascript:void(0)">
                                             <i class="fa fa-times text-navy"></i>
                                         </a>
 
                                     </div>
+                                @endforeach
 
+                                <div class="meta-row">
+
+                                    <input type="text" name="custom_names[]"
+                                           class="form-control input-md pull-left custom-field-name"
+                                           placeholder="{{ trans("posts::posts.custom_name") }}"/>
+
+                                    <textarea name="custom_values[]"
+                                              class="form-control input-lg pull-left custom-field-value"
+                                              rows="1"
+                                              placeholder="{{ trans("posts::posts.custom_value") }}"></textarea>
+
+                                    <a class="remove-custom-field pull-right" href="javascript:void(0)">
+                                        <i class="fa fa-times text-navy"></i>
+                                    </a>
 
                                 </div>
-                            </div>
 
+
+                            </div>
                         </div>
-
-
-                        <div class="row">
-
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <i class="fa fa-camera"></i>
-                                        {{ trans("posts::posts.add_image") }}
-                                        <a class="remove-post-image pull-right" href="javascript:void(0)">
-                                            <i class="fa fa-times text-navy"></i>
-                                        </a>
-                                    </div>
-                                    <div class="panel-body form-group">
-                                        <div class="row post-image-block">
-                                            <input type="hidden" name="image_id" class="post-image-id"
-                                                   value="{{ ($post->image) ? $post->image->id : 0 }}">
-
-                                            <a class="change-post-image label" href="javascript:void(0)">
-                                                <i class="fa fa-pencil text-navy"></i>
-                                                {{ trans("posts::posts.change_image") }}
-                                            </a>
-
-                                            <a class="post-media-preview" href="javascript:void(0)">
-                                                <img width="100%" height="130px" class="post-image"
-                                                     src="{{ ($post and @$post->image) ? thumbnail($post->image->path) : assets("admin::default/image.png") }}">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <i class="fa fa-camera"></i>
-                                        {{ trans("posts::posts.add_media") }}
-                                        <a class="remove-post-media pull-right" href="javascript:void(0)">
-                                            <i class="fa fa-times text-navy"></i>
-                                        </a>
-                                    </div>
-                                    <div class="panel-body form-group">
-                                        <div class="row post-media-block">
-                                            <input type="hidden" name="media_id" class="post-media-id"
-                                                   value="{{ ($post->media) ? $post->media->id : 0 }}">
-
-
-                                            <a class="change-post-media label" href="javascript:void(0)">
-                                                <i class="fa fa-pencil text-navy"></i>
-                                                {{ trans("posts::posts.change_media") }}
-                                            </a>
-
-                                            <a class="post-media-preview" href="javascript:void(0)">
-                                                <img width="100%" height="130px" class="post-media"
-                                                     src="{{ ($post and @ $post->media) ? ($post->media->provider_image) : assets("admin::default/video.png") }}">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        @foreach(Action::fire("post.form.featured", $post) as $output)
-                            {!!  $output !!}
-                        @endforeach
 
                     </div>
-                    <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-check-square"></i>
-                                {{ trans("posts::posts.post_status") }}
-                            </div>
-                            <div class="panel-body">
-                                <div class="form-group switch-row">
-                                    <label class="col-sm-9 control-label"
-                                           for="input-status">{{ trans("posts::posts.attributes.status") }}</label>
-                                    <div class="col-sm-3">
-                                        <input @if (@Request::old("status", $post->status)) checked="checked" @endif
-                                        type="checkbox" id="input-status" name="status" value="1"
-                                               class="status-switcher switcher-sm">
+
+
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-camera"></i>
+                                    {{ trans("posts::posts.add_image") }}
+                                    <a class="remove-post-image pull-right" href="javascript:void(0)">
+                                        <i class="fa fa-times text-navy"></i>
+                                    </a>
+                                </div>
+                                <div class="panel-body form-group">
+                                    <div class="row post-image-block">
+                                        <input type="hidden" name="image_id" class="post-image-id"
+                                               value="{{ ($post->image) ? $post->image->id : 0 }}">
+
+                                        <a class="change-post-image label" href="javascript:void(0)">
+                                            <i class="fa fa-pencil text-navy"></i>
+                                            {{ trans("posts::posts.change_image") }}
+                                        </a>
+
+                                        <a class="post-media-preview" href="javascript:void(0)">
+                                            <img width="100%" height="130px" class="post-image"
+                                                 src="{{ ($post and @$post->image) ? thumbnail($post->image->path) : assets("admin::default/image.png") }}">
+                                        </a>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
 
-                                <div class="form-group format-area event-format-area">
-                                    <div class="input-group date datetimepick">
-                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                        <input name="published_at" type="text"
-                                               value="{{ (!$post->id) ? date("Y-m-d H:i:s") : @Request::old('published_at', $post->published_at) }}"
-                                               class="form-control" id="input-published_at"
-                                               placeholder="{{ trans("posts::posts.attributes.published_at") }}">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-camera"></i>
+                                    {{ trans("posts::posts.add_media") }}
+                                    <a class="remove-post-media pull-right" href="javascript:void(0)">
+                                        <i class="fa fa-times text-navy"></i>
+                                    </a>
+                                </div>
+                                <div class="panel-body form-group">
+                                    <div class="row post-media-block">
+                                        <input type="hidden" name="media_id" class="post-media-id"
+                                               value="{{ ($post->media) ? $post->media->id : 0 }}">
+
+
+                                        <a class="change-post-media label" href="javascript:void(0)">
+                                            <i class="fa fa-pencil text-navy"></i>
+                                            {{ trans("posts::posts.change_media") }}
+                                        </a>
+
+                                        <a class="post-media-preview" href="javascript:void(0)">
+                                            <img width="100%" height="130px" class="post-media"
+                                                 src="{{ ($post and @ $post->media) ? ($post->media->provider_image) : assets("admin::default/video.png") }}">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        {{--<div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-folder"></i>
-                                {{ trans("posts::posts.attributes.format") }}
-                            </div>
-                            <div class="panel-body">
-                                <div class="form-group" style="margin-bottom:0px">
-
-                                    @foreach (config("posts.formats") as $format => $icon)
-                                        <div class="radio" style="margin-top: 0;">
-                                            <label>
-                                                <input type="radio" name="format" value="{{ $format }}"
-                                                       class="i-checks"
-                                                       @if ((!$post->id and $format == "post") or ($post and $post->format == $format)) checked @endif>&nbsp;
-                                                <i class="fa {{ $icon }}"></i>&nbsp;
-                                                <span class="lbl">{{ trans('posts::posts.format_' . $format) }}</span>
-                                            </label>
-                                        </div>
-                                    @endforeach
-                                </div>
-
-                            </div>
-
-                        </div>--}}
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-folder"></i>
-                                {{ trans("posts::posts.add_category") }}
-                            </div>
-                            <div class="panel-body">
-
-                                @if (Dot\Categories\Models\Category::count())
-                                    <ul class='tree-views'>
-                                        <?php
-                                        echo Dot\Categories\Models\Category::tree(array(
-                                            "row" => function ($row, $depth) use ($post, $post_categories) {
-                                                $html = "<li><div class='tree-row checkbox i-checks'><a class='expand' href='javascript:void(0)'>+</a> <label><input type='checkbox' ";
-                                                if ($post and in_array($row->id, $post_categories->pluck("id")->toArray())) {
-                                                    $html .= 'checked="checked"';
-                                                }
-                                                $html .= "name='categories[]' value='" . $row->id . "'> &nbsp;" . $row->name . "</label></div>";
-                                                return $html;
-                                            }
-                                        ));
-                                        ?>
-                                    </ul>
-                                @else
-                                    {{ trans("categories::categories.no_records") }}
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-th-large"></i>
-                                {{ trans("posts::posts.add_block") }}
-                            </div>
-                            <div class="panel-body">
-                                @if (Dot\Blocks\Models\Block::count())
-                                    <ul class='tree-views'>
-                                        @foreach(Dot\Blocks\Models\Block::all() as $block)
-                                            <li>
-                                                <div class='tree-row checkbox i-checks'>
-                                                    <label>
-                                                        <input type='checkbox'
-                                                               @if ($post and in_array($block->id, $post_blocks->pluck("id")->toArray())) checked="checked"
-                                                               @endif
-                                                               name='blocks[]'
-                                                               value='{{ $block->id }}'>
-                                                        &nbsp; {{ $block->name }}
-                                                    </label>
-                                                </div>
-                                        @endforeach
-                                    </ul>
-                                @else
-                                    {{ trans("posts::posts.no_blocks") }}
-                                @endif
-                            </div>
-                        </div>
-
-
-                        <div class="panel panel-default format-area album-format-area">
-                            <div class="panel-heading">
-                                <i class="fa fa-camera"></i>
-                                {{ trans("posts::posts.add_gallery") }}
-                                <a href="javascript:void(0)" class="add_gallery pull-right text-navy"><i
-                                            class="fa fa-plus"></i></a>
-                            </div>
-                            <div class="panel-body">
-                                <div class="iwell add_gallery"
-                                     @if ($post and count($post_galleries->toArray()) > 0) style="display:none" @endif>
-                                    {{ trans("posts::posts.no_galleries_found") }}
-                                    <a href="javascript:void(0)" class="add_gallery pull-right text-navy"><i
-                                                class="fa fa-info-circle"></i></a>
-                                </div>
-
-                                <div class="post_galleries">
-                                    @if ($post)
-                                        @foreach ($post_galleries->toArray() as $gallery)
-                                            <div class="iwell post_gallery"
-                                                 data-gallery-id="{{ $gallery["id"] }}">{{ $gallery["name"] }}
-                                                <input type="hidden" name="galleries[]" value="{{ $gallery["id"] }}"/>
-                                                <a href="javascript:void(0)"
-                                                   class="remove_gallery pull-right text-navy">
-                                                    <i class="fa fa-times"></i>
-                                                </a>
-                                            </div>
-                                        @endforeach
-                                    @endif
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-tags"></i>
-                                {{ trans("posts::posts.add_tag") }}
-                            </div>
-                            <div class="panel-body">
-                                <div class="form-group" style="position:relative">
-                                    <input type="hidden" name="tags" id="tags_names"
-                                           value="{{ join(",", $post_tags) }}">
-                                    <ul id="mytags"></ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        @foreach(Action::fire("post.form.sidebar") as $output)
-                            {!! $output !!}
-                        @endforeach
 
                     </div>
+
+                    @foreach(Action::fire("post.form.featured", $post) as $output)
+                        {!!  $output !!}
+                    @endforeach
 
                 </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-check-square"></i>
+                            {{ trans("posts::posts.post_status") }}
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group switch-row">
+                                <label class="col-sm-9 control-label"
+                                       for="input-status">{{ trans("posts::posts.attributes.status") }}</label>
+                                <div class="col-sm-3">
+                                    <input @if (@Request::old("status", $post->status)) checked="checked" @endif
+                                    type="checkbox" id="input-status" name="status" value="1"
+                                           class="status-switcher switcher-sm">
+                                </div>
+                            </div>
 
+                            {{--  <div class="form-group format-area event-format-area">
+                                  <div class="input-group date datetimepick">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input name="published_at" type="text"
+                                             value="{{ (!$post->id) ? date("Y-m-d H:i:s") : @Request::old('published_at', $post->published_at) }}"
+                                             class="form-control" id="input-published_at"
+                                             placeholder="{{ trans("posts::posts.attributes.published_at") }}">
+                                  </div>
+                              </div>--}}
+                        </div>
+                    </div>
+
+                    {{--<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-folder"></i>
+                            {{ trans("posts::posts.attributes.format") }}
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group" style="margin-bottom:0px">
+
+                                @foreach (config("posts.formats") as $format => $icon)
+                                    <div class="radio" style="margin-top: 0;">
+                                        <label>
+                                            <input type="radio" name="format" value="{{ $format }}"
+                                                   class="i-checks"
+                                                   @if ((!$post->id and $format == "post") or ($post and $post->format == $format)) checked @endif>&nbsp;
+                                            <i class="fa {{ $icon }}"></i>&nbsp;
+                                            <span class="lbl">{{ trans('posts::posts.format_' . $format) }}</span>
+                                        </label>
+                                    </div>
+                                @endforeach
+                            </div>
+
+                        </div>
+
+                    </div>--}}
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-folder"></i>
+                            {{ trans("posts::posts.add_category") }}
+                        </div>
+                        <div class="panel-body">
+
+                            @if (Dot\Categories\Models\Category::count())
+                                <ul class='tree-views'>
+                                    <?php
+                                    echo Dot\Categories\Models\Category::tree(array(
+                                        "row" => function ($row, $depth) use ($post, $post_categories) {
+                                            $html = "<li><div class='tree-row checkbox i-checks'><a class='expand' href='javascript:void(0)'>+</a> <label><input type='checkbox' ";
+                                            if ($post and in_array($row->id, $post_categories->pluck("id")->toArray())) {
+                                                $html .= 'checked="checked"';
+                                            }
+                                            $html .= "name='categories[]' value='" . $row->id . "'> &nbsp;" . $row->name . "</label></div>";
+                                            return $html;
+                                        }
+                                    ));
+                                    ?>
+                                </ul>
+                            @else
+                                {{ trans("categories::categories.no_records") }}
+                            @endif
+                        </div>
+                    </div>
+
+                    {{--<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-th-large"></i>
+                            {{ trans("posts::posts.add_block") }}
+                        </div>
+                        <div class="panel-body">
+                            @if (Dot\Blocks\Models\Block::count())
+                                <ul class='tree-views'>
+                                    @foreach(Dot\Blocks\Models\Block::all() as $block)
+                                        <li>
+                                            <div class='tree-row checkbox i-checks'>
+                                                <label>
+                                                    <input type='checkbox'
+                                                           @if ($post and in_array($block->id, $post_blocks->pluck("id")->toArray())) checked="checked"
+                                                           @endif
+                                                           name='blocks[]'
+                                                           value='{{ $block->id }}'>
+                                                    &nbsp; {{ $block->name }}
+                                                </label>
+                                            </div>
+                                    @endforeach
+                                </ul>
+                            @else
+                                {{ trans("posts::posts.no_blocks") }}
+                            @endif
+                        </div>
+                    </div>--}}
+
+
+                {{--    <div class="panel panel-default format-area album-format-area">
+                        <div class="panel-heading">
+                            <i class="fa fa-camera"></i>
+                            {{ trans("posts::posts.add_gallery") }}
+                            <a href="javascript:void(0)" class="add_gallery pull-right text-navy"><i
+                                        class="fa fa-plus"></i></a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="iwell add_gallery"
+                                 @if ($post and count($post_galleries->toArray()) > 0) style="display:none" @endif>
+                                {{ trans("posts::posts.no_galleries_found") }}
+                                <a href="javascript:void(0)" class="add_gallery pull-right text-navy"><i
+                                            class="fa fa-info-circle"></i></a>
+                            </div>
+
+                            <div class="post_galleries">
+                                @if ($post)
+                                    @foreach ($post_galleries->toArray() as $gallery)
+                                        <div class="iwell post_gallery"
+                                             data-gallery-id="{{ $gallery["id"] }}">{{ $gallery["name"] }}
+                                            <input type="hidden" name="galleries[]" value="{{ $gallery["id"] }}"/>
+                                            <a href="javascript:void(0)"
+                                               class="remove_gallery pull-right text-navy">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    @endforeach
+                                @endif
+
+                            </div>
+                        </div>
+                    </div>--}}
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-tags"></i>
+                            {{ trans("posts::posts.add_tag") }}
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group" style="position:relative">
+                                <input type="hidden" name="tags" id="tags_names"
+                                       value="{{ join(",", $post_tags) }}">
+                                <ul id="mytags"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    @foreach(Action::fire("post.form.sidebar") as $output)
+                        {!! $output !!}
+                    @endforeach
+
+                </div>
             </div>
+
+        </div>
 
     </form>
 
@@ -462,7 +458,7 @@
             });
 
 
-          /*  $("[name=format]").on('ifChecked', function () {
+            $("[name=format]").on('ifChecked', function () {
                 $(this).iCheck('check');
                 $(this).change();
                 switch_format($(this));
@@ -476,7 +472,7 @@
 
                 $(".format-area").hide();
                 $("." + format + "-format-area").show();
-            }*/
+            }
 
 
             var elems = Array.prototype.slice.call(document.querySelectorAll('.status-switcher'));
@@ -625,6 +621,7 @@
                 }
             });
 
+/*
 
             $(".add_gallery").filemanager({
                 types: "image|video|audio|pdf",
@@ -682,6 +679,7 @@
                     className: "bootbox-sm"
                 });
             });
+*/
 
         });
 

@@ -49,15 +49,16 @@ class Media extends Model
         if (count($types)) {
             $allowed_types = $types;
         } else {
-            $allowed_types = Config("media.allowed_file_types");
+            $allowed_types = option("media_allowed_file_types", Config("media.allowed_file_types"));
         }
 
         if (is_array($allowed_types)) {
             $allowed_types = join(",", $allowed_types);
         }
+        dd(option("media_max_file_size", 51200));
 
         $rules = array(
-            'files.0' => "mimes:" . $allowed_types . "|max:" . Config("media.max_file_size"),
+            'files.0' => "mimes:" . $allowed_types . "|max:" . option("media_max_file_size", 51200),
         );
 
         $validator = Validator::make(Request::all(), $rules);
@@ -79,7 +80,7 @@ class Media extends Model
 
         $media = Media::where("hash", sha1_file($file->getRealPath()))->first();
 
-        if (count($media)) {
+        if ($media) {
             $media->touch();
             return $media->id;
         }
@@ -211,7 +212,7 @@ class Media extends Model
             $width = Image::make($file_directory . "/" . $filename)->width();
             $height = Image::make($file_directory . "/" . $filename)->height();
 
-            $resize_mode = config("media.resize_mode", "resize_crop");
+            $resize_mode = option("media_resize_mode", "resize_crop");
 
             foreach ($sizes as $size => $dimensions) {
 
@@ -535,7 +536,7 @@ class Media extends Model
 
         $media = Media::where("hash", $file_hash)->first();
 
-        if (count($media)) {
+        if ($media) {
 
             $media->touch();
 

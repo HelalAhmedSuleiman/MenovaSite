@@ -23,7 +23,7 @@
         $(document).ready(function () {
             $('.{{ $id }}').summernote({
                 placeholder: '{{ $placeholder }}',
-                height: 100,
+                height: 200,
                 tabsize: 2
             });
         });
