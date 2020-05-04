@@ -1,0 +1,20 @@
+{
+    "name": "dot/languages",
+    "description": "The languages plugin of dot/platform",
+    "keywords": [
+        "framework",
+        "laravel",
+        "cms",
+        "plugins",
+        "platform",
+        "dot",
+        "languages"
+    ],
+    "license": "MIT",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Dot\\Languages\\": "src"
+        }
+    }
+}

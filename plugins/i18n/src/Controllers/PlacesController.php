@@ -98,11 +98,12 @@ class PlacesController extends Controller
 
             $place->save();
 
+
             // Fire saved action
 
             Action::fire("place.saved", $place);
 
-            return Redirect::route("admin.places.edit", array("id" => $place->id, "parent" => $parent))
+            return Redirect::route("admin.places.edit", array("place_id" => $place->id, "parent" => $parent))
                 ->with("message", trans("i18n::places.events.created"));
         }
 

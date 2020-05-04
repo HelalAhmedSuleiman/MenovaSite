@@ -32,7 +32,7 @@ return [
     'facebook' => [
         'client_id' => '310780969884573',
         'client_secret' => '631602b8311d0d5906916cb094c48d86',
-        'redirect' => env("APP_URL") ."login/facebook",
+        'redirect' => env("APP_URL") ."/".app()->getLocale()."/login/facebook",
     ],
 
 ];

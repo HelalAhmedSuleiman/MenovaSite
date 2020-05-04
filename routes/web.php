@@ -11,6 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::group(['prefix' => \LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
+
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('index');
+
+    Route::get('login/facebook', 'Auth\AuthController@facebook');
+    Route::get('logout', 'Auth\AuthController@logout');
+
+    Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
+        Route::any('login', 'AuthController@login')->name('user.login');
+        Route::any('register', 'AuthController@register')->name('user.register');
+        Route::get('register/facebook', 'AuthController@facebookLogin')->name("facebook.register");
+        Route::get('login/facebook', 'AuthController@facebookLogin')->name("facebook.login");
+    });
 });
+
+Route::get('/home', 'HomeController@index')->name('home');

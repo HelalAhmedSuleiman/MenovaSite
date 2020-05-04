@@ -139,8 +139,8 @@
 
                                             <td>
                                                 <a data-toggle="tooltip" data-placement="bottom"
-                                                   title="{{trans("i18n::places.show_cities")}}" class="text-navy"
-                                                   href="{{route("admin.places.show", array("parent" => $place->id))}}">
+                                                   title="{{trans("i18n::places.edit")}}"
+                                                   href="{{ @route("admin.places.edit", array("place_id" => $place->id, "parent" => $country->id))}}">
                                                     <strong>{{$place->name }}</strong>
                                                 </a>
                                             </td>
@@ -148,7 +148,7 @@
                                             <td>
                                                 <a data-toggle="tooltip" data-placement="bottom"
                                                    title="{{trans("i18n::places.edit")}}" class="text-navy"
-                                                   href="{{route("admin.places.edit", array("id" => $place->id))}}">
+                                                   href="{{route("admin.places.edit", array("place_id" => $place->id))}}">
                                                     <strong>{{$place->code }}</strong>
                                                 </a>
                                             </td>
@@ -174,7 +174,7 @@
                                             <td class="center">
                                                 <a data-toggle="tooltip" data-placement="bottom"
                                                    title="{{trans("i18n::places.edit")}}"
-                                                   href="{{ @route("admin.places.edit", array("id" => $place->id, "parent" => $country->id))}}">
+                                                   href="{{ @route("admin.places.edit", array("place_id" => $place->id, "parent" => $country->id))}}">
                                                     <i class="fa fa-pencil text-navy"></i>
                                                 </a>
                                                 <a data-toggle="tooltip" data-placement="bottom"

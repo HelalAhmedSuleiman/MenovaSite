@@ -2,14 +2,14 @@
 
 return [
 
-    'places' => 'Places',
-    'place' => 'place',
-    'add_new' => 'Add New Place',
-    'edit' => 'Edit Place',
-    'back_to_places' => 'Back to places',
-    'no_records' => 'No Places Found',
-    'save_place' => 'Save Place',
-    'search_places' => 'Search places',
+    'places' => 'Locations',
+    'place' => 'location',
+    'add_new' => 'Add New Location',
+    'edit' => 'Edit Location',
+    'back_to_places' => 'Back to locations',
+    'no_records' => 'No Locations Found',
+    'save_place' => 'Save Location',
+    'search_places' => 'Search locations',
     'per_page' => 'Per Page',
     'bulk_actions' => 'Bulk Actions',
     'delete' => 'delete',
@@ -22,17 +22,17 @@ return [
     'desc' => 'Descending',
     'actions' => 'Actions',
     'filter' => 'filter',
-    "related_places" => "Related places",
+    "related_places" => "Related locations",
     'all_categories' => 'All categories',
     "filter" => "Filter",
     'sure_delete' => 'Are you sure to delete ?',
     "yes" => "Yes",
     "no" => "No",
-    "delete_place" => "Delete place",
+    "delete_place" => "Delete location",
     'activated' => 'Activated',
-    'sure_activate' => 'Are you sure to activate place?',
+    'sure_activate' => 'Are you sure to activate location?',
     'deactivated' => 'Deactivated',
-    'sure_deactivate' => 'Are you sure to deactivate place?',
+    'sure_deactivate' => 'Are you sure to deactivate location?',
     'geo_settings' => 'Geo settings',
     'show_cities' => 'Show cities',
 
@@ -47,14 +47,14 @@ return [
     ],
 
     "events" => [
-        'created' => 'Place created successfully',
-        'updated' => 'Place updated successfully',
-        'deleted' => 'Place deleted successfully',
-        'activated' => 'Place activated successfully',
-        'deactivated' => 'Place deactivated successfully'
+        'created' => 'Location created successfully',
+        'updated' => 'Location updated successfully',
+        'deleted' => 'Location deleted successfully',
+        'activated' => 'Location activated successfully',
+        'deactivated' => 'Location deactivated successfully'
     ],
 
     'permissions' => [
-        'manage_places' => 'Manage places'
+        'manage_places' => 'Manage locations'
     ]
 ];

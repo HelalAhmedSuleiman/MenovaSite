@@ -8,18 +8,23 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2",
+        "php": "^7.2.5",
         "dot/platform": "^0.5.1",
-        "fideloper/proxy": "^4.0",
-        "laravel/framework": "^6.2",
-        "laravel/tinker": "^2.0"
+        "fideloper/proxy": "^4.2",
+        "fruitcake/laravel-cors": "^1.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "laravel/framework": "^7.0",
+        "laravel/socialite": "^4.3",
+        "laravel/tinker": "^2.0",
+        "laravel/ui": "^2.0",
+        "mcamara/laravel-localization": "^1.5"
     },
     "require-dev": {
-        "facade/ignition": "^1.4",
+        "facade/ignition": "^2.0",
         "fzaninotto/faker": "^1.9.1",
-        "mockery/mockery": "^1.0",
-        "nunomaduro/collision": "^3.0",
-        "phpunit/phpunit": "^8.0"
+        "mockery/mockery": "^1.3.1",
+        "nunomaduro/collision": "^4.1",
+        "phpunit/phpunit": "^8.5"
     },
     "config": {
         "optimize-autoloader": true,
@@ -52,7 +57,9 @@
             "Dot\\Roles\\": "plugins/roles/src/",
             "Dot\\Users\\": "plugins/users/src/",
             "Dot\\Pages\\": "plugins/pages/src/",
-            "Dot\\I18n\\": "plugins/i18n/src/"
+            "Dot\\I18n\\": "plugins/i18n/src/",
+            "Dot\\Languages\\": "plugins/languages/src/",
+            "Dot\\Industries\\": "plugins/industries/src/"
         }
     },
     "minimum-stability": "dev",

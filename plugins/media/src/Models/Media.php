@@ -527,7 +527,7 @@ class Media extends Model
     function saveData($data, $extension = NULL, $guard = "backend")
     {
 
-        $path = storage_path("temp/" . str_random(20));
+        $path = storage_path(str_random(20));
 
         File::put($path, $data);
 

@@ -24,6 +24,7 @@ class MakeUsersTable extends Migration
             $table->string('api_token', 60)->nullable()->unique();
             $table->string('code')->nullable()->index();
             $table->integer('role_id')->default(0)->index();
+            $table->integer('type')->default(1)->index();
             $table->integer('last_login')->nullable()->index();
             $table->integer('status')->default(0)->index();
             $table->integer('backend')->default(0)->index();

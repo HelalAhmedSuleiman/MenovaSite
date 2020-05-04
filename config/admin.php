@@ -42,5 +42,7 @@ return [
         "categories" => Dot\Categories\Categories::class,
         "tags" => Dot\Tags\Tags::class,
         "i18n" => Dot\I18n\I18n::class,
+        "languages" => Dot\Languages\Languages::class,
+        "industries" => Dot\Industries\Industries::class,
     ]
 ];
